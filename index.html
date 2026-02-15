@@ -1,140 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exclusive VIP Access</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
+s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '940041215364503');
 fbq('track', 'PageView');
 </script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=940041215364503&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Telegram Access</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Orbitron:wght@700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+--bg:#0f172a;
+--glass:rgba(30,41,59,0.6);
+--blue:linear-gradient(135deg,#00c6ff,#0072ff);
+--accent:#00c6ff;
+--gray:#94a3b8;
+}
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family:'Poppins',sans-serif;
-  background: radial-gradient(circle at top, #1a0000 0%, #000 60%);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100dvh;
-  padding:20px;
-  color:#fff;
+font-family:'Montserrat',sans-serif;
+background:#0f172a;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+background-image:
+linear-gradient(rgba(15,23,42,0.95),rgba(15,23,42,0.95)),
+repeating-linear-gradient(transparent,transparent 70px,rgba(0,198,255,0.04) 70px,rgba(0,198,255,0.04) 71px),
+repeating-linear-gradient(90deg,transparent,transparent 70px,rgba(0,198,255,0.04) 70px,rgba(0,198,255,0.04) 71px);
+color:white;
 }
-
-@keyframes glowBorder {
-  0% {box-shadow:0 0 25px rgba(255,0,0,0.3);}
-  50% {box-shadow:0 0 60px rgba(255,0,0,0.8);}
-  100% {box-shadow:0 0 25px rgba(255,0,0,0.3);}
-}
-
-@keyframes pulse {
-  0% {transform:scale(1);}
-  50% {transform:scale(1.05);}
-  100% {transform:scale(1);}
-}
-
 .card{
-  width:100%;
-  max-width:420px;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(20px);
-  border-radius:30px;
-  padding:45px 28px;
-  text-align:center;
-  border:1px solid rgba(255,0,0,0.2);
-  animation:glowBorder 4s infinite;
+width:95%;
+max-width:420px;
+background:var(--glass);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:20px;
+padding:25px;
+text-align:center;
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
+animation:fadeIn 0.6s ease;
 }
-
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(15px)}
+to{opacity:1;transform:translateY(0)}
+}
+.top-badge{
+background:rgba(255,0,80,0.15);
+color:#ff4d6d;
+font-size:11px;
+padding:5px 14px;
+border-radius:20px;
+display:inline-block;
+margin-bottom:15px;
+font-weight:600;
+}
 .profile{
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  margin:0 auto 20px;
-  overflow:hidden;
-  border:4px solid red;
-  box-shadow:0 0 25px red;
+width:95px;
+height:95px;
+margin:0 auto 15px;
+position:relative;
 }
-
+.profile::before{
+content:'';
+position:absolute;
+inset:-5px;
+border-radius:50%;
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+filter:blur(12px);
+opacity:0.6;
+}
 .profile img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #1e293b;
+position:relative;
 }
-
 h1{
-  font-family:'Orbitron',sans-serif;
-  font-size:24px;
-  letter-spacing:2px;
-  margin-bottom:10px;
+font-size:24px;
+font-weight:800;
+margin-bottom:8px;
+background:linear-gradient(to right,#fff,#00c6ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
-
-.subtitle{
-  color:#ff4d4d;
-  font-size:13px;
-  letter-spacing:2px;
-  margin-bottom:10px;
+.desc{
+font-size:13px;
+color:var(--gray);
+margin-bottom:20px;
+line-height:1.5;
 }
-
-.social-proof{
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:8px;
+.stats{
+display:flex;
+justify-content:space-between;
+margin-bottom:20px;
+font-size:12px;
 }
-
+.stats div span{
+display:block;
+font-size:16px;
+font-weight:800;
+}
 .live{
-  color:#00ff99;
-  font-weight:600;
+font-size:11px;
+color:#00ff88;
+margin-bottom:20px;
 }
-
-.timer{
-  color:#ff4d4d;
-  font-size:14px;
-  margin:15px 0 20px;
-  font-weight:600;
-}
-
 .btn{
-  display:block;
-  width:100%;
-  padding:18px;
-  border-radius:50px;
-  font-size:18px;
-  font-weight:700;
-  text-decoration:none;
-  color:#fff;
-  background:linear-gradient(90deg,#b30000,#ff0000);
-  box-shadow:0 0 25px rgba(255,0,0,0.7);
-  animation:pulse 2s infinite;
-  transition:0.3s ease;
+display:block;
+width:100%;
+padding:16px;
+border-radius:14px;
+background:var(--blue);
+color:white;
+font-weight:800;
+font-size:16px;
+text-decoration:none;
+letter-spacing:1px;
+position:relative;
+overflow:hidden;
+transition:0.2s;
+box-shadow:0 5px 25px rgba(0,114,255,0.4);
 }
-
-.btn:active{
-  transform:scale(0.96);
+.btn:active{transform:scale(0.96)}
+.timer{
+margin-top:20px;
+font-size:12px;
+color:var(--gray);
 }
-
-.bottom{
-  margin-top:20px;
-  font-size:12px;
-  color:#aaa;
+#countdown{
+display:block;
+font-family:'Orbitron',sans-serif;
+font-size:26px;
+color:var(--accent);
+margin-top:5px;
+}
+.footer{
+margin-top:15px;
+font-size:10px;
+color:#475569;
 }
 </style>
 </head>
@@ -142,48 +163,91 @@ h1{
 <body>
 
 <div class="card">
-  <div class="profile">
-    <img src="https://i.ibb.co/CKd0g0RC/photo-2026-02-10-04-23-07.jpg">
-  </div>
 
-  <h1>JOHNSON NUMBERSHOT</h1>
-  <div class="subtitle">★ DAILY VIP CHANNEL ★</div>
+<div class="top-badge">Limited VIP Slots Available</div>
 
-  <div class="social-proof">
-    <span class="live">● <span id="viewerCount"></span> People Viewing Right Now</span>
-  </div>
+<div class="profile">
+<img src="https://i.ibb.co/CKd0g0RC/photo-2026-02-10-04-23-07.jpg" alt="logo">
+</div>
 
-  <div class="timer">
-    ⏳ Offer Ends In: <span id="countdown"></span>
-  </div>
+<h1>JOHNSON NUMBERSHOT</h1>
 
-  <a href="https://t.me/+NtsbPqnYhqEyZTll"
-     class="btn"
-     onclick="fbq('track', 'Subscribe');">
-     JOIN VIP NOW – FREE ACCESS
-  </a>
+<p class="desc">
+Premium trading insights, daily updates & exclusive VIP access on Telegram.
+</p>
 
-  <div class="bottom">🔒 Secure • Instant Access • No Spam</div>
+<div class="stats">
+<div><span id="members">8500</span>Members</div>
+<div><span>92%</span>Accuracy</div>
+<div><span>Active</span>Status</div>
+</div>
+
+<div class="live">🟢 <span id="liveCount">187</span> people viewing now</div>
+
+<a href="https://t.me/+NtsbPqnYhqEyZTll" class="btn telegram-btn">
+JOIN VIP NOW – FREE ACCESS
+</a>
+
+<div class="timer">
+Access Window Closes In
+<span id="countdown">0:30</span>
+</div>
+
+<div class="footer">
+Educational purpose only. Trading involves risk.
+</div>
+
 </div>
 
 <script>
-// Random live viewers
-document.getElementById("viewerCount").innerText =
-Math.floor(Math.random() * (120 - 65) + 65);
 
-// Countdown timer (30 seconds)
-var time = 30;
-var countdown = document.getElementById("countdown");
+// Member Counter
+let memberTarget = 8742;
+let current = 8500;
+let memberEl = document.getElementById("members");
 
-var timerInterval = setInterval(function(){
-  var seconds = time % 60;
-  countdown.innerHTML = "00:" + (seconds < 10 ? "0" : "") + seconds;
-  if(time > 0){
+let counter = setInterval(() => {
+    if (current < memberTarget) {
+        current++;
+        memberEl.textContent = current.toLocaleString();
+    } else {
+        clearInterval(counter);
+    }
+}, 15);
+
+// Live Viewers
+function updateLive() {
+    let live = Math.floor(Math.random() * 25) + 170;
+    document.getElementById("liveCount").textContent = live;
+}
+updateLive();
+setInterval(updateLive, 3000);
+
+// Countdown Timer
+let time = 30;
+let timerEl = document.getElementById("countdown");
+
+function updateTimer() {
+    let m = Math.floor(time / 60);
+    let s = time % 60;
+    s = s < 10 ? '0' + s : s;
+    timerEl.textContent = m + ":" + s;
+
+    if (time <= 0) {
+        clearInterval(countdown);
+        timerEl.textContent = "Expired";
+    }
     time--;
-  } else {
-    clearInterval(timerInterval);
-  }
-},1000);
+}
+updateTimer();
+let countdown = setInterval(updateTimer, 1000);
+
+// Button Tracking
+document.querySelector('.telegram-btn').addEventListener('click', function () {
+    if (navigator.vibrate) navigator.vibrate(40);
+    fbq('track', 'Subscribe');
+});
+
 </script>
 
 </body>
